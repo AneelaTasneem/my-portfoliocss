@@ -1,0 +1,115 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main navbar styling */
+.navbar {
+  width: 100%;
+  height: 60px; /* Adjust height as needed */
+  background-color: #02066f; /* Dark blue */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* For the container inside the navbar */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo styling */
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Menu styling */
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu ul {
+  list-style-type: none; /* Remove bullets from the list */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Keep the horizontal layout */
+  gap: 20px;
+}
+
+/* Link styling */
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.link:hover {
+  color: #ffcb00; /* Yellow color on hover */
+}
+
+/* Hamburger icon for mobile */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;  /* Remove outline */
+  box-shadow: none; /* Remove box-shadow */
+}
+
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Hide menu by default on small screens */
+    position: absolute;
+    top: 60px; /* Position menu below navbar */
+    right: 20px;
+    background-color: #02066f; /* Background color to match navbar */
+    width: 200px; /* Set a fixed width */
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: none;  /* Ensure no shadow on the menu */
+  }
+
+  .menu.open {
+    display: block; /* Show menu when toggled */
+  }
+
+  .menu ul {
+    flex-direction: column; /* Stack the menu items vertically */
+    gap: 15px; /* Add space between items */
+    padding: 0;
+  }
+
+  .menu li {
+    padding: 10px 15px; /* Add padding to the menu items for better spacing */
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+  }
+
+  /* Remove unwanted focus shadow on hamburger */
+  .hamburger:focus,
+  .hamburger:active {
+    outline: none;
+    box-shadow: none;
+  }
+
+  /* Remove outline and box-shadow from the menu items */
+  .menu ul li:focus,
+  .menu ul li:active {
+    outline: none;
+    box-shadow: none;
+  }
+}

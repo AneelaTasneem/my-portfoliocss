@@ -1,0 +1,85 @@
+/* Container for Projects Section */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #e0e6a7; /* Light green background */
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Project Card Hover Effect */
+.project-card:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+}
+
+/* Project Image Styling */
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Project Title Styling */
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #02066f; /* Dark blue color */
+  margin-bottom: 10px;
+}
+
+/* Project Description Styling */
+.project-description {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Description Heading */
+.description-heading {
+  font-weight: bold;
+  color: #02066f;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-container {
+    padding: 30px 20px; /* Reduce padding for tablets */
+  }
+
+  .project-card {
+    width: 45%; /* Two cards per row on tablet-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 20px; /* Reduced padding for mobile devices */
+  }
+
+  .project-card {
+    width: 90%; /* Full-width cards on mobile */
+    margin-bottom: 20px; /* Add margin at the bottom of each card */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-title {
+    font-size: 1rem; /* Smaller title font on very small screens */
+  }
+
+  .project-description {
+    font-size: 0.8rem; /* Smaller description text for mobile */
+  }
+}

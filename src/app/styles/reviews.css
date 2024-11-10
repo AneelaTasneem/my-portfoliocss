@@ -1,0 +1,100 @@
+.reviews-section {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.reviews-section .title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #02066f;
+}
+
+.reviews-section .reviewsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 80rem;
+  width: 100%;
+}
+
+/* Two columns on medium screens (min-width: 640px) */
+@media (min-width: 640px) {
+  .reviews-section .reviewsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Three columns on larger screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .reviews-section .reviewsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.reviews-section .reviewCard {
+  background-color: #e7e7ad;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for review cards */
+.reviews-section .reviewCard:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+}
+
+.reviews-section .avatar {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.reviews-section .reviewerName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #02066f;
+}
+
+.reviews-section .stars {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.reviews-section .reviewText {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  text-align: justify;
+  color: #333; /* Ensure text readability */
+}
+
+/* Responsive tweaks for smaller devices */
+@media (max-width: 480px) {
+  .reviews-section .title {
+    font-size: 1.5rem; /* Adjust title size for small screens */
+  }
+
+  .reviews-section .reviewText {
+    font-size: 0.85rem; /* Smaller text size for mobile */
+  }
+
+  .reviews-section .reviewCard {
+    padding: 0.8rem; /* Reduce padding for small screens */
+  }
+
+  .reviews-section .reviewerName {
+    font-size: 1rem; /* Smaller font size for reviewer names on mobile */
+  }
+
+  .reviews-section .stars {
+    font-size: 1.1rem; /* Smaller stars for mobile */
+  }
+}

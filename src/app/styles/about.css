@@ -1,0 +1,96 @@
+/* About Section Styling */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding-top: 50px; /* Adjusted for smaller screens */
+  background-color: #ffffff;
+  padding: 20px; /* Added padding for smaller screens */
+}
+
+/* Heading Styling */
+.about-heading {
+  font-size: 1.8rem; /* Adjusted for mobile */
+  font-weight: 700;
+  color: #02066f;
+  margin-bottom: 2rem;
+  text-align: center; /* Centered heading for smaller screens */
+}
+
+/* Introduction Text Styling */
+.introduction-text {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  max-width: 100%; /* Allow it to take full width */
+  line-height: 1.6;
+}
+
+/* Highlight Text */
+.highlight-text {
+  color: #02066f;
+  font-weight: 800;
+}
+
+/* Qualification Card Styling */
+.qualification-card {
+  max-width: 100%;
+  background-color: #e7e7ad;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the qualification card */
+}
+
+/* List Styling */
+.qualification-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .introduction-text {
+    font-size: 1.2rem;
+    max-width: 700px; /* Adjust max-width for tablets */
+  }
+
+  .qualification-card {
+    max-width: 700px; /* Limit the card's width on larger screens */
+    padding: 30px;
+  }
+
+  .qualification-list {
+    font-size: 1.1rem; /* Slightly larger text on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-heading {
+    font-size: 3rem;
+  }
+
+  .introduction-text {
+    font-size: 1.3rem;
+    max-width: 800px; /* Larger width for intro text */
+  }
+
+  .qualification-card {
+    max-width: 800px; /* Larger width for the qualification card */
+    padding: 40px;
+  }
+
+  .qualification-list {
+    font-size: 1.2rem; /* Larger list items for desktop */
+  }
+}
+
